@@ -893,23 +893,70 @@
             
             <h3 class="glow-effect">1.4 我们都一样：教培人的华丽转型故事</h3>
             
-            <div class="content-box">
-                <div class="tip">
-                    <h3>从兴趣类老师到银发兴趣教育IP</h3>
-                    <div style="display: flex; align-items: center; margin: 10px 0;">
-                        <div style="flex: 1;">
-                            <p><strong>慧洋老师</strong>——曾是线下茶叶店老板/自修禅舞10年，月收入5000元。</p>
-                            <p><strong>转型路径：</strong>将自己独特的禅舞理念"带气舞动得气血"系统化，制作成线上课程，在抖音和视频号分享教学片段。</p>
-                            <p><strong>转型结果：</strong>6个月内粉丝突破30万，线上课程累计销售2800份，单价199元。月均收入超过5万元，同时进行线下VIP密训课，打通私域高客单变现全路径</p>
-                        </div>
-                        <div style="flex: 0 0 150px; margin-left: 15px;">
-                            <img src="https://cdn.jsdelivr.net/gh/irun7s/zuoke664@main/image/%E6%85%A7%E6%B4%8B%E8%80%81%E5%B8%88%E6%8A%96%E9%9F%B3.PNG?raw=true" alt="慧洋老师抖音" style="width: 100%; border-radius: 5px;">
-                            <img src="https://cdn.jsdelivr.net/gh/irun7s/zuoke664@main/image/%E6%85%A7%E6%B4%8B%E8%80%81%E5%B8%88%E8%A7%86%E9%A2%91%E5%8F%B7.PNG?raw=true" alt="慧洋老师视频号" style="width: 100%; border-radius: 5px;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+<style>
+  /* 可贴到全局 CSS；如果你已有样式表，把这段合并进去即可 */
+  .content-box .tip h3{ margin: 0 0 8px; }
+  .row{
+    display: flex;
+    align-items: flex-start;           /* 别用 center，会让不等高内容上下错位 */
+    gap: 12px;
+    margin: 10px 0;
+  }
+  .row .main{
+    flex: 1;
+    min-width: 0;                      /* 阻止文字把容器撑爆 */
+  }
+  .row .side{
+    flex: 0 0 150px;                   /* 桌面端固定 150px，手机端会在媒体查询里解锁 */
+    margin-left: 15px;
+  }
+  .row .side img{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+  }
+  .row .side img + img{ margin-top: 8px; }
+
+  /* 手机端适配：改为上下排，右侧图变两列小网格，更紧凑 */
+  @media (max-width: 768px){
+    .row{ 
+      flex-direction: column; 
+      gap: 10px;
+    }
+    .row .side{
+      flex: none;           /* 解除 150px 限制 */
+      width: 100%;
+      margin-left: 0;
+    }
+    .row .side{
+      display: grid;
+      grid-template-columns: 1fr 1fr;  /* 两张图并排 */
+      gap: 8px;
+    }
+    .row .side img + img{ margin-top: 0; } /* 网格下不需要上外边距 */
+  }
+</style>
+
+<div class="content-box">
+  <div class="tip">
+    <h3>从兴趣类老师到银发兴趣教育IP</h3>
+
+    <div class="row">
+      <div class="main">
+        <p><strong>慧洋老师</strong>——曾是线下茶叶店老板/自修禅舞10年，月收入5000元。</p>
+        <p><strong>转型路径：</strong>将自己独特的禅舞理念“带气舞动得气血”系统化，制作成线上课程，在抖音和视频号分享教学片段。</p>
+        <p><strong>转型结果：</strong>6个月内粉丝突破30万，线上课程累计销售2800份，单价199元。月均收入超过5万元，同时进行线下VIP密训课，打通私域高客单变现全路径。</p>
+      </div>
+
+      <div class="side">
+        <img src="https://cdn.jsdelivr.net/gh/irun7s/zuoke664@main/image/%E6%85%A7%E6%B4%8B%E8%80%81%E5%B8%88%E6%8A%96%E9%9F%B3.PNG" alt="慧洋老师抖音">
+        <img src="https://cdn.jsdelivr.net/gh/irun7s/zuoke664@main/image/%E6%85%A7%E6%B4%8B%E8%80%81%E5%B8%88%E8%A7%86%E9%A2%91%E5%8F%B7.PNG" alt="慧洋老师视频号">
+      </div>
+    </div>
+
+  </div>
+</div>           
             <p>慧洋老师的经历告诉我们：<span class="highlight">教培人的转型不是从零开始，而是将你已有的专业积累进行重新包装和商业化。</span>你过去积累的专业能力和教学经验，正是你最大的财富和优势。</p>
             
             <h3 class="glow-effect">1.5 机遇就在眼前：为什么现在是转型的最佳时机</h3>
@@ -1013,6 +1060,7 @@
             <div class="action-box">
                 <h3>获取完整SOP工具包</h3>
                 <p>本资料仅展示了SOP流程的核心框架。想要获取完整的实操工具包、模板和案例，扫描下方二维码或添加：zuoke664。</p>
+                <div class="image-container" style="max-width: 200px; margin: 20px auto;">
                     <img src="https://cdn.jsdelivr.net/gh/irun7s/zuoke664@main/image/%E7%8E%8B%E7%A1%95-%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpeg?raw=true" alt="王硕二维码">
                     <p class="image-caption">添加：zuoke664</p>
                 <a href="#summary" class="gold-button">阅读总结与行动指南</a>
